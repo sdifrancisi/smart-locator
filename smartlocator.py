@@ -48,17 +48,6 @@ embeddings = OpenAIEmbeddings(
     openai_api_base = openai_api_base,
     openai_api_key = openai_api_key
 )
-# Create a Completion Instance of Azure OpenAI
-llm = AzureChatOpenAI(
-    model="gpt-3.5-turbo",
-    deployment_name = deployment_name,
-    openai_api_type = openai_api_type,
-    openai_api_version = openai_api_version,
-    openai_api_base = openai_api_base,
-    openai_api_key = openai_api_key,
-    temperature=0.1,
-    max_tokens=500
-)
 
 class CompletionRequest(BaseModel):
     Question: str
